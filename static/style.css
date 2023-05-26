@@ -1,0 +1,21 @@
+body {
+    text-align: center;
+}
+
+form {
+    display: inline-block;
+    text-align: left;
+}
+
+input[type="submit"] {
+    margin-top: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-top: 5px;
+}

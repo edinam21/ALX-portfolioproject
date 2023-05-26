@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expense Tracker - Budgets</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Expense Tracker</h1>
+    <h2>Budgets</h2>
+    <ul>
+        {% for budget in budgets %}
+            <li>
+                <span>{{ budget.category }}</span>
+                <span>{{ budget.limit }}</span>
+            </li>
+        {% endfor %}
+    </ul>
+    <h2>Add Budget</h2>
+    <form method="POST">
+        <label for="category">Category:</label>
+        <input type="text" id="category" name="category" required>
+        <br>
+        <label for="limit">Limit:</label>
+        <input type="number" id="limit" name="limit" step="0.01" required>
+        <br>
+        <input type="submit" value="Add Budget">
+    </form>
+</body>
+</html>
